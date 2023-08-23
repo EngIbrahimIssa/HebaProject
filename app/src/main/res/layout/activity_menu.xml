@@ -17,7 +17,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#fec38e"
+            android:background="#ffffff"
             app:popupTheme="@style/AppTheme.PopupOverlay" >
 
             <LinearLayout
@@ -32,7 +32,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:textColor="@color/white"
+                    android:textColor="#C80909"
                     android:layout_weight="1"
                     android:textSize="28dp"
                     android:text="الفهرس"/>

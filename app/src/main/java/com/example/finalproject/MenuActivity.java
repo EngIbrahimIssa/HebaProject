@@ -7,8 +7,11 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,50 +21,40 @@ public class MenuActivity extends AppCompatActivity {
 
     ListView list_item;
     ArrayList arrayList = new ArrayList<>();
+    ArrayList<DataModel> dataModels;
+    MenuAdapter adapter;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        list_item =findViewById(R.id.list_item);
+        list_item = findViewById(R.id.list_item);
+        dataModels= new ArrayList<>();
 
-        arrayList.add("شكل الحروف حسب موقعها من الكلمة");
-        arrayList.add("أمثلة على شكل الحروف داخل الكلمة");
-        arrayList.add("الحركات ...... الفتحة");
-        arrayList.add("الكسرة");
-        arrayList.add("الضمة");
-        arrayList.add("الحركات في الرحروف");
-        arrayList.add("أمثلة على الحركات في الكلمات");
+        dataModels.add(new DataModel("شكل الحروف حسب موقعها من الكلمة", ""));
+        dataModels.add(new DataModel("أمثلة على شكل الحروف داخل الكلمة",""));
+        dataModels.add(new DataModel("الحركات ...... الفتحة",""));
+        dataModels.add(new DataModel("الكسرة",""));
+        dataModels.add(new DataModel("الضمة",""));
+        dataModels.add(new DataModel("الحركات في الرحروف",""));
+        dataModels.add(new DataModel("أمثلة على الحركات في الكلمات",""));
+        dataModels.add(new DataModel("التنوين ........ بالفتح",""));
+        dataModels.add(new DataModel("بالكسر",""));
+        dataModels.add(new DataModel("بالضم",""));
+        dataModels.add(new DataModel("التنوين في الحروف",""));
+        dataModels.add(new DataModel("اأمثلة على الكلمات بالحركات و التنوين",""));
+        dataModels.add(new DataModel("االســكون",""));
+        dataModels.add(new DataModel("القلقـــة",""));
+        dataModels.add(new DataModel("الشــــدة",""));
+        dataModels.add(new DataModel("الغنــــة",""));
+        dataModels.add(new DataModel("الهــمـزة",""));
 
-        // Create a List from String Array elements
-        final ArrayList<String> fruits_list = new ArrayList<String>(arrayList);
 
-        // Create an ArrayAdapter from List
-        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>
-                (this, android.R.layout.simple_list_item_1, fruits_list);
-
-        // DataBind ListView with items from ArrayAdapter
-        list_item.setAdapter(arrayAdapter);
+        adapter = new MenuAdapter(dataModels,getApplicationContext());
+        list_item.setAdapter(adapter);
 
 
-        list_item.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrayList) {
-            @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
-                View row = super.getView(position, convertView, parent);
-
-                if(position %2 != 1)
-                {
-                    // do something change color
-                    row.setBackgroundColor(Color.parseColor("#f5d862")); // some color
-                }
-                else
-                {
-                    // default state
-                    row.setBackgroundColor (Color.WHITE); // default coloe
-                }
-                return row;
-            }
-        });
     }
 }
