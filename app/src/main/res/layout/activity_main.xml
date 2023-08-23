@@ -57,6 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp">
             <ImageView
+                android:id="@+id/bu_menu"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
                 android:src="@drawable/button_green"/>
