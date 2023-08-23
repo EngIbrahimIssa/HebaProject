@@ -44,8 +44,8 @@ public class MenuActivity extends AppCompatActivity {
         dataModels.add(new DataModel("بالكسر",""));
         dataModels.add(new DataModel("بالضم",""));
         dataModels.add(new DataModel("التنوين في الحروف",""));
-        dataModels.add(new DataModel("اأمثلة على الكلمات بالحركات و التنوين",""));
-        dataModels.add(new DataModel("االســكون",""));
+        dataModels.add(new DataModel("أمثلة على الكلمات بالحركات و التنوين",""));
+        dataModels.add(new DataModel("الســكون",""));
         dataModels.add(new DataModel("القلقـــة",""));
         dataModels.add(new DataModel("الشــــدة",""));
         dataModels.add(new DataModel("الغنــــة",""));
