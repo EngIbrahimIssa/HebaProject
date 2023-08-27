@@ -17,7 +17,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#fec38e"
+            android:background="#f7af6c"
             app:popupTheme="@style/AppTheme.PopupOverlay" >
 
             <LinearLayout
@@ -60,14 +60,13 @@
                 android:id="@+id/bu_menu"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
-                android:src="@drawable/button_green"/>
+                android:src="@drawable/button_orang"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="الفهرس"
-                android:textSize="35dp"
-                android:fontFamily="sans-serif"
-                android:paddingBottom="40dp"
+                android:textSize="33dp"
+                android:textStyle="bold"
                 android:textColor="@color/white"
                 android:layout_centerInParent="true"
                 />
@@ -81,14 +80,13 @@
             <ImageView
                 android:layout_width="180dp"
                 android:layout_height="180dp"
-                android:src="@drawable/button_orang"/>
+                android:src="@drawable/button_green"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="حروف الهجاء"
                 android:textSize="27dp"
-                android:fontFamily="sans-serif"
-                android:paddingBottom="40dp"
+                android:textStyle="bold"
                 android:textColor="@color/white"
                 android:layout_centerInParent="true"
                 />
