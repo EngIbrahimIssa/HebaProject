@@ -12,7 +12,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/img_background"
+        android:background="@drawable/img_splash"
     />
 
 
@@ -82,9 +82,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:divider="#000000"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:layout_marginTop="20dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:scrollbarSize="1dp"
+            android:layout_marginTop="40dp"
            tools:listitem="@layout/row_item"
             />
     </LinearLayout>
