@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -14,18 +15,21 @@ import android.widget.ImageView;
 public class SplashScreen extends AppCompatActivity {
 
     ImageView img_icon;
+    MediaPlayer mySong;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen2);
 
-        img_icon = findViewById(R.id.img_icon);
+        /*img_icon = findViewById(R.id.img_icon);*/
+        mySong = MediaPlayer.create(SplashScreen.this,R.raw.sound);
+        mySong.start();
 
-        Animation animUpDown;
+ /*       Animation animUpDown;
         animUpDown = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.up_down);
-        img_icon.startAnimation(animUpDown);
+        img_icon.startAnimation(animUpDown);*/
 
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -34,6 +38,6 @@ public class SplashScreen extends AppCompatActivity {
                 Intent i = new Intent(SplashScreen.this, MainActivity.class);
                 startActivity(i);
             }
-        }, 3000);
+        }, 8000);
     }
 }
