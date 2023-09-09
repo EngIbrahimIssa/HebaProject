@@ -91,6 +91,10 @@ public class MenuActivity extends AppCompatActivity {
         dataModels.add(new DataModel("إقلاب التنوين","https://www.youtube.com/watch?v=5N2nwf-Kokg&list=PLyWewL9irDRnDDrphNTJGV2TGAgdffeky&index=45"));
         dataModels.add(new DataModel("التقاء التنوين مع السكون","https://www.youtube.com/watch?v=J4mDR0e5amY&list=PLyWewL9irDRnDDrphNTJGV2TGAgdffeky&index=46"));
         dataModels.add(new DataModel("التمارين","https://www.youtube.com/watch?v=jJi4noCnsGU&list=PLyWewL9irDRnDDrphNTJGV2TGAgdffeky&index=47"));
+        dataModels.add(new DataModel("سورة الفاتحة",""));
+        dataModels.add(new DataModel("سورة الأخلاص",""));
+        dataModels.add(new DataModel("سورة الفلق",""));
+        dataModels.add(new DataModel("سورة الناس",""));
 
 
 
