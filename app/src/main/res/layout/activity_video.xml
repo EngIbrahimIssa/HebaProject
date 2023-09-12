@@ -9,50 +9,74 @@
     tools:context=".VideoActivity">
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         app:popupTheme="@style/AppTheme.PopupOverlay"
         tools:ignore="MissingConstraints">
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="?attr/actionBarSize"
             android:background="#f7af6c"
             app:popupTheme="@style/AppTheme.PopupOverlay" >
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="left"
                 android:layout_marginEnd="10dp"
                 android:layout_marginStart="10dp"
                 android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ic_fullScreen"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_full"/>
+                    <ImageView
+                        android:id="@+id/ic_stopFull"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:visibility="gone"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_stopfull"/>
+
+                </RelativeLayout>
+
                 <ImageView
                     android:id="@+id/ic_back"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/ic_back"/>
 
-
-
-            </LinearLayout>
+            </RelativeLayout>
 
         </com.google.android.material.appbar.MaterialToolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
-<!--    <WebView
+    <!--<WebView
         android:id="@+id/mWebView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>-->
+        android:layout_height="match_parent"
+        android:layout_gravity="center"/>-->
     <!-- Youtube Player view which
     will play our youtube video -->
-    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-        android:id="@+id/videoPlayer"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
         >
-    </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/videoPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
+
+    </LinearLayout>
+
 </LinearLayout>

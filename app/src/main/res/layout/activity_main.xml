@@ -29,15 +29,15 @@
 
                 <ImageView
                     android:id="@+id/ic_about"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:layout_marginEnd="10dp"
 
                     android:src="@drawable/ic_about"/>
                 <ImageView
                     android:id="@+id/ic_download"
-                    android:layout_width="37dp"
-                    android:layout_height="37dp"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
                     android:src="@drawable/ic_download"/>
 
 
