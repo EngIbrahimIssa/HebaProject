@@ -31,7 +31,7 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTube
 
 public class VideoActivity extends AppCompatActivity {
     YouTubePlayerView youTubePlayerView;
-    String video_id = "WiEUR4_Ytu0";
+    public  static  String video_id ;
     ImageView ic_back,ic_fullScreen,ic_stopFull;
 
     @SuppressLint({"MissingInflatedId", "ClickableViewAccessibility"})

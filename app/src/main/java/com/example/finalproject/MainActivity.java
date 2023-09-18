@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mySong.start();
+                VideoActivity.video_id = "WiEUR4_Ytu0";
                 Intent intent = new Intent(MainActivity.this, VideoActivity.class);
                 startActivity(intent);
             }

@@ -1,6 +1,7 @@
 package com.example.finalproject;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,6 +32,7 @@ public class MenuAdapter  extends ArrayAdapter<DataModel> implements View.OnClic
     @Override
     public void onClick(View view) {
 
+
     }
 
 
@@ -42,26 +44,26 @@ public class MenuAdapter  extends ArrayAdapter<DataModel> implements View.OnClic
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.row_item, parent, false);
 
-    /*    if(position %2 != 1)
-        {
-            convertView.setBackgroundColor(Color.parseColor("#f5d862")); // some color
-        }
-        else
-        {
-            // default state
-            convertView.setBackgroundColor (Color.WHITE); // default coloe
-        }*/
             viewHolder.txtName =  convertView.findViewById(R.id.name);
             viewHolder.txtNum =  convertView.findViewById(R.id.num);
-
             viewHolder.num = String.valueOf(position+1);
-
            convertView.setTag(viewHolder);
 
 
 
         viewHolder.txtName.setText(dataModel.getName());
         viewHolder.txtNum.setText(viewHolder.num);
+
+        viewHolder.txtName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                VideoActivity.video_id = dataModel.getUrl();
+                Intent i = new Intent(mContext,VideoActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                mContext.startActivity(i);
+            }
+        });
         // Return the completed view to render on screen
         return convertView;
     }
