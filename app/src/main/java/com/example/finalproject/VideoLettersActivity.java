@@ -1,37 +1,23 @@
 package com.example.finalproject;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.ImageView;
-import android.widget.MediaController;
-import android.widget.Toast;
-import android.widget.VideoView;
-import android.widget.ZoomControls;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.YouTubePlayerListener;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.utils.YouTubePlayerUtils;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
-public class VideoActivity extends AppCompatActivity {
+public class VideoLettersActivity extends AppCompatActivity {
     YouTubePlayerView youTubePlayerView;
-    public  static  String video_id ;
+    String video_id = "WiEUR4_Ytu0";
     ImageView ic_back,ic_fullScreen,ic_stopFull;
 
     @SuppressLint({"MissingInflatedId", "ClickableViewAccessibility"})
@@ -68,7 +54,7 @@ public class VideoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                    Intent intent = new Intent(VideoActivity.this, MenuActivity.class);
+                    Intent intent = new Intent(VideoLettersActivity.this, MainActivity.class);
                     startActivity(intent);
 
             }
@@ -93,8 +79,7 @@ public class VideoActivity extends AppCompatActivity {
         });
 
 
-        // This function will be automatically called out,when
-        // zoom in button is being pressed
+
 
     }
 

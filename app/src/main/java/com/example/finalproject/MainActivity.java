@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mySong.start();
-                copyAssets("book.pdf");
+                downloadPdf("book.pdf");
 
             }
         });
@@ -79,8 +79,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mySong.start();
-                VideoActivity.video_id = "WiEUR4_Ytu0";
-                Intent intent = new Intent(MainActivity.this, VideoActivity.class);
+                Intent intent = new Intent(MainActivity.this, VideoLettersActivity.class);
                 startActivity(intent);
             }
         });
@@ -88,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    private void copyAssets(String filename) {
+    private void downloadPdf(String filename) {
 
         SweetAlertDialog  pDialog = new SweetAlertDialog(MainActivity.this, SweetAlertDialog.PROGRESS_TYPE);
         pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
@@ -188,6 +187,11 @@ public class MainActivity extends AppCompatActivity {
                 //  Toast.makeText(MainActivity.this, "Storage Permission Denied", Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+
     }
 }
 
