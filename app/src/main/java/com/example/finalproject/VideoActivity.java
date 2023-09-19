@@ -68,7 +68,7 @@ public class VideoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(VideoActivity.this, MainActivity.class);
+                Intent intent = new Intent(VideoActivity.this, MenuActivity.class);
                 startActivity(intent);
             }
         });

@@ -76,7 +76,7 @@ public class MenuActivity extends AppCompatActivity {
         dataModels.add(new DataModel("الألف القصيرة فوق الواو والياء","9Dt0q6cfJ9I"));
         dataModels.add(new DataModel("الحروف الصغيرة","IAP6qIJHbTM"));
         dataModels.add(new DataModel("الألف المقصورة على صورة الياء","w3NEDNxF2gU"));
-        dataModels.add(new DataModel("الـمــد","hgo8aCvV-sME"));
+        dataModels.add(new DataModel("الـمــد","go8aCvV-sME"));
         dataModels.add(new DataModel("حروف أوائل السور","CCko1rOSF0E"));
         dataModels.add(new DataModel("إظهار النون والميم الساكنتين","b-RMNXsprOk"));
         dataModels.add(new DataModel("إظهار التنوين","Ne0tNLu5Faw"));
