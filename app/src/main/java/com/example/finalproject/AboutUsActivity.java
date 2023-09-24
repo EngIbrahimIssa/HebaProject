@@ -28,4 +28,9 @@ public class AboutUsActivity extends AppCompatActivity {
                 }
             });
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

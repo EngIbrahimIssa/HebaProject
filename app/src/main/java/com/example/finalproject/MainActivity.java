@@ -32,7 +32,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 public class MainActivity extends AppCompatActivity {
 
     private static final int STORAGE_PERMISSION_CODE = 1;
-    ImageView bu_menu, bu_letters, ic_about, ic_download;
+    ImageView bu_menu, bu_letters, ic_about, ic_download,ic_guide;
     MediaPlayer mySong;
 
     @SuppressLint("MissingInflatedId")
@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         bu_menu = findViewById(R.id.bu_menu);
         ic_about = findViewById(R.id.ic_about);
         ic_download = findViewById(R.id.ic_download);
+        ic_guide = findViewById(R.id.ic_guide);
         bu_letters = findViewById(R.id.bu_letters);
         mySong = MediaPlayer.create(MainActivity.this, R.raw.click);
 
@@ -63,6 +64,14 @@ public class MainActivity extends AppCompatActivity {
                 mySong.start();
                 downloadPdf("book.pdf");
 
+            }
+        });
+        ic_guide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mySong.start();
+                Intent i = new Intent(MainActivity.this, GuideActivity.class);
+                startActivity(i);
             }
         });
 
