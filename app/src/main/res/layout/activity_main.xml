@@ -55,10 +55,7 @@
                     android:textSize="25dp"
                     android:text="القراءة العربية"/>
 
-                <!--<ImageView
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:src="@drawable/icon"/>-->
+
             </LinearLayout>
 
         </com.google.android.material.appbar.MaterialToolbar>

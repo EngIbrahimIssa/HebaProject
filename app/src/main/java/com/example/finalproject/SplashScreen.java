@@ -26,10 +26,7 @@ public class SplashScreen extends AppCompatActivity {
         mySong = MediaPlayer.create(SplashScreen.this,R.raw.sound);
         mySong.start();
 
- /*       Animation animUpDown;
-        animUpDown = AnimationUtils.loadAnimation(getApplicationContext(),
-                R.anim.up_down);
-        img_icon.startAnimation(animUpDown);*/
+
 
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {

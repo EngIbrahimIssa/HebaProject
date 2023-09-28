@@ -14,10 +14,9 @@ public class MenuAdapter  extends ArrayAdapter<DataModel> implements View.OnClic
 
     private ArrayList<DataModel> dataSet;
     Context mContext;
-
     private static class ViewHolder {
         TextView txtName , txtNum;
-        String url,num;
+        String num;
 
     }
 
